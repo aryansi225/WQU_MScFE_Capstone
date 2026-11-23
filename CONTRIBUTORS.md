@@ -1,7 +1,6 @@
 # Capstone contributors
 
-Administrative author names are intentionally placeholders at the project team's request:
-
+Authors:
 - Aryan Singh
 
 
