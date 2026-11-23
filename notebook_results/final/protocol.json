@@ -1,0 +1,77 @@
+{
+  "profile": "final",
+  "config": {
+    "steps": 192,
+    "markets": 10,
+    "seeds": [
+      101,
+      211,
+      307
+    ],
+    "draws": 200,
+    "epochs": 150
+  },
+  "mechanisms": [
+    "CPMM",
+    "LMSR"
+  ],
+  "scenarios": [
+    "null_noise",
+    "nonlinear",
+    "reference"
+  ],
+  "lookback": 4,
+  "flow_limit": 1.0,
+  "horizons": [
+    10,
+    50
+  ],
+  "adaptation_budgets": [
+    0.0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "target_market_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009
+  ],
+  "adaptation_market_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009
+  ],
+  "primary_flow_contrast": "MLP minus ridge within each mechanism/scenario",
+  "primary_adaptation_contrast": "source MLP plus bias minus shrinkage mean",
+  "primary_path_contrast": "MLP minus ridge terminal CRPS within each mechanism/horizon",
+  "reference_rollout": "frozen at origin",
+  "tail_rule": "95th percentile absolute validation return times sqrt(horizon)",
+  "normalizer": "gross input/input-token reserve for CPMM; log-odds change for LMSR",
+  "models": {
+    "mlp_hidden": 16,
+    "gru_hidden": 12,
+    "mlp_max_iter": 300
+  },
+  "real_compute": {
+    "fit_cap": 4096,
+    "validation_cap": 2048,
+    "gru_epochs": 50,
+    "sampling": "evenly spaced chronological observations; identical across models"
+  },
+  "uncertainty": "paired target markets; source repeats averaged within market; descriptive intervals"
+}

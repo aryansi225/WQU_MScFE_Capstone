@@ -1,0 +1,9 @@
+{
+  "profile": "final",
+  "elapsed_seconds": 51.46,
+  "real_status": "COMPLETED_REAL_MARKET_PIPELINE; actual market evidence only when data_kind=real_market",
+  "code_sha256": "01a5be886eddd6c1068aaf208e30f3656f6c7fb5750501d79268838c9f8d8edd",
+  "fixture": false,
+  "complete": true,
+  "outputs": "notebook_results/final"
+}

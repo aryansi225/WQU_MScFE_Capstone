@@ -1,0 +1,23 @@
+{
+  "model_events.csv": "bd755936af47c9f5fea076bc6e0d29366c37cc6222813f3829c4c7582eea4e15",
+  "checkpoint.json": "4862bd7225022c44a918a3c2ba96b228a1acb65291ef4e5c856ab5ae0ac92a30",
+  "reconciliation.json": "ecabb1279e3fe420367f81d9981ee9b5b680bb8d96271877c14cfc4cb1265456",
+  "acquisition.sqlite3": "8e6bbaf7313613103f2c29e6b5502b4611f34aea59b5f627d51a9029d7286d01",
+  "reference_prices.csv": "87c4c73d09b8a33547077c4583af9627e1e75a69599f0f6536fbf526433fccac",
+  "blocks.json": "c7d9123ed6f5a5b187043275a10deda1da7325e089bee466669302f2efec15da",
+  "real_swaps.csv": "0e99692863b30e1119724cdfcca18c8d5f56f6a3a8d24f4c76029e9e91c517c4",
+  "acquisition_progress.json": "3df033c551cd0bd203e1b6ed30b34c84ae1515a485d3a0cbd75e18feb42fe5fb",
+  "pilot_report.json": "626d70e11923a0800c2891e2c553126f4302ccdeacc402bf48ed3cf36d817ec7",
+  "dataset_card.json": "a8541847ee5224c12056efacdc77562b43f59feec0d4363edbf78a6f560d5fee",
+  "excluded_events.csv": "52719885b4cdb0258e8ee4c4251ece73f58f874c594527207c3208a7224e803e",
+  "acquisition_report.json": "c8c952a097de9a618f66c323e1c1b8e3641f1591dae525f1dc38fec63b04ae9d",
+  "model_quality.json": "cc509ac3721700c509dc700ca45b4bed39e26f202c64b4bb0da26af672fa3af6",
+  "query_ledger.json": "28bc7fc4bc878be4afcaee86b2f241964e0274e3c43938e0fe1a4c7d85f97b14",
+  "raw_logs.jsonl": "005db20ac5081ae96c047ae065a8e13eb09106b04232f99ab521a3238097792e",
+  "reference_archives/ETHUSDC-1m-2024-01.zip.CHECKSUM": "901daf12e406b850d7bf9630c673b44e5f60199731158e2eecfa338c649cc9b6",
+  "reference_archives/ETHUSDC-1m-2024-01.zip": "14ea6b986a8bc69061dfe300bb041705da0b96327261d499dbed2d8778b77294",
+  "reference_archives/ETHUSDC-1m-2023-12.zip.CHECKSUM": "a526319b3011e1bdec8b4e00995537faf9cc9d134fe21e3bf439a60f94a026d3",
+  "reference_archives/ETHUSDC-1m-2024-02.zip": "f6a65fafb7e69dde19ca7b255245226be137e7e2851b7c07bfef8fd322a02f0f",
+  "reference_archives/ETHUSDC-1m-2024-02.zip.CHECKSUM": "3e9a412461d5be018e567bb6fd42c51cb4f8bca2e37d654aa243e3ee9f0c4776",
+  "reference_archives/ETHUSDC-1m-2023-12.zip": "bf0b79370f00576c675af9a5a0ac68f4b5ba58bcd2001552f5dd80b95ef73d94"
+}

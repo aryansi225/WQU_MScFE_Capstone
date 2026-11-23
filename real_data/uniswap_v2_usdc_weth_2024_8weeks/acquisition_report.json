@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "queried_ranges": 39914,
+  "header_checks": 56,
+  "timestamp_source": "RPC log blockTimestamp; sampled daily headers checked",
+  "estimated_log_cu": 2394840
+}

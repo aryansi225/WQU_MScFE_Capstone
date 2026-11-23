@@ -1,0 +1,15 @@
+{
+  "scope": "Actual first-three-day data quality only; no models fitted or forecasts scored",
+  "source_swaps": 7380,
+  "retained_swaps": 7206,
+  "segments": 174,
+  "max_continuous_log_price_replay_error": 2.1316282072803006e-14,
+  "max_reference_age_seconds": 58.00099992752075,
+  "reference_alignment_drops": 0,
+  "main_loader_passed": true,
+  "lookback_shape": [
+    4,
+    7
+  ],
+  "data_temporary_directory": "/tmp/amm_actual_pilot_quality_1f2b_zai"
+}

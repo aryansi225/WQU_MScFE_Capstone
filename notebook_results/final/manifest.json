@@ -1,0 +1,50 @@
+{
+  "profile": "final",
+  "config": {
+    "steps": 192,
+    "markets": 10,
+    "seeds": [
+      101,
+      211,
+      307
+    ],
+    "draws": 200,
+    "epochs": 150
+  },
+  "lookback": 4,
+  "flow_limit": 1.0,
+  "horizons": [
+    10,
+    50
+  ],
+  "models": [
+    "no_flow",
+    "mean",
+    "ridge",
+    "external",
+    "mlp",
+    "gru",
+    "direct_coordinate_ridge"
+  ],
+  "real_status": "COMPLETED_REAL_MARKET_PIPELINE; actual market evidence only when data_kind=real_market",
+  "input_hashes": {
+    "model_events.csv": "bd755936af47c9f5fea076bc6e0d29366c37cc6222813f3829c4c7582eea4e15",
+    "dataset_card.json": "a8541847ee5224c12056efacdc77562b43f59feec0d4363edbf78a6f560d5fee",
+    "reference_prices.csv": "87c4c73d09b8a33547077c4583af9627e1e75a69599f0f6536fbf526433fccac",
+    "checksums.json": "782a2aa651078fced07ca05a15929a3bc58bd5698cf4a21784a787f62c898ae7"
+  },
+  "python": "3.12.11",
+  "packages": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.9.1"
+  },
+  "protocol": "compact_notebook_v4; frozen small real-data budget; actual market evidence requires data",
+  "frozen_protocol_sha256": "a9b2b0d546dc1b4d65bb676a78bb6b73d9aeaf5d7ff679c9de2495201d6c6023",
+  "calendar_block_days": 3,
+  "bootstrap_repeats": 1000,
+  "executed_code_sha256": "01a5be886eddd6c1068aaf208e30f3656f6c7fb5750501d79268838c9f8d8edd"
+}

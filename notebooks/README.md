@@ -1,0 +1,33 @@
+# Compact Colab submission
+
+Open [capstone_amm_study.ipynb](capstone_amm_study.ipynb) in Colab and run its cells from top to bottom using the bundled data. It contains its experiment code and does not import `amm_sim`. Install the scientific and notebook-execution dependencies with `python -m pip install -r notebooks/requirements.txt` in an equipped environment. The complete synthetic-plus-real final study executed in **51.46 seconds on CPU**. Both notebooks have run in fresh local Jupyter kernels; an actual Google Colab execution has not been performed.
+
+The main notebook contains the synthetic experiment and the real-data evaluation code: chronological block splits, full-information and AMM-only model comparisons, real-only versus source/adapted estimators, path ensembles, calendar-block uncertainty, plots, hashes and result exports. These form a new protocol rather than reproductions of historical repository tables. The default `final` profile uses three source-training repeats and ten independent target markets per mechanism/scenario. Repeats share the target markets; they are not additional independent markets. The `demo` profile is for execution checks.
+
+The companion [prepare_real_data.ipynb](prepare_real_data.ipynb) uses the standard library for RPC extraction, raw event decoding, Swap/Sync reconstruction, ordinary-swap quote reconciliation, liquidity segmentation, token-decimal conversion, reference-candle downloads/checksums, and as-of reference alignment. The fixed source is Ethereum mainnet Uniswap v2 USDC/WETH, January 1–February 25, 2024. Acquisition reads `ALCHEMY_URL` from the local ignored `.env`, or `AMM_RPC_URL` from the environment/Colab secrets. Keys and full endpoints are never written to metadata or outputs. Ten-block batches respect the free plan, transient requests retry, and a SQLite range cache supports resuming. Acquisition is explicit, so fixture and study runs do not trigger downloads.
+
+[validation_report.json](validation_report.json) records **26 passing checks against the completed actual-market evidence**, including complete query coverage and raw-response hashes, all source/cleaned-data checksums, exact integer swap/quote accounting, reference timing, split/budget integrity, common test days/origins, real result exports, frozen code/protocol hashes, fresh-kernel execution, `pip check`, and credential scans. Earlier checks also exercised 400 synthetic swaps, interrupted/mock acquisition, rejected bad inputs, and 2,000 randomized structure/error-bound comparisons. [pilot_quality_report.json](pilot_quality_report.json) records the actual first-three-day input/replay checks without model fitting.
+
+The earlier installation failure was traced to the dev-container firewall: missing package hosts and blocked TCP DNS fallback. Those approved rules are fixed, and the separately approved Alchemy/Binance hosts support live acquisition. The ARM environment uses PyTorch 2.9.1+cpu. The canonical executed notebook now includes the **final synthetic and actual-market study**. Fixture outputs remain under `notebook_results/demo/fixture_pipeline_check/`, separate from actual-market outputs.
+
+The completed evidence is under [notebook_results/final](../notebook_results/final/README.md), with [actual-market tables and figures](../notebook_results/final/real_market/README.md). The fixed eight-week export contains **126,934 reconciled swaps (98.18% retained)**. The [findings and claim assessment](../paper/capstone_results.md) retain the negative neural-transfer results alongside the supported structural/synthetic findings. The code, scientific runs and [full capstone writeup](../paper/report/capstone_report.pdf) are complete. Presentation and author administrative details remain. The current scope is recorded in [the notebook-first capstone plan](../paper/notebook_capstone_plan.md).
+
+The experiment budget stays deliberately small: ridge regression, a 16-unit MLP and a 12-unit GRU, plus inexpensive reference/control models. No large pretrained models, GPU training or architecture search is required.
+
+**Reproduce locally.** The optional runner only executes notebooks; it contains no model or experiment implementation:
+
+```bash
+/workspace/.venv-notebooks/bin/python notebooks/run_study.py --profile final
+/workspace/.venv-notebooks/bin/python notebooks/run_study.py --profile demo --fixture
+/workspace/.venv-notebooks/bin/python notebooks/run_study.py --prepare
+```
+
+The first command runs the full synthetic configuration and evaluates `real_data/uniswap_v2_usdc_weth_2024_8weeks/` when its prepared export is available. The second reconstructs 400 labeled synthetic swaps and exercises the market-data pipeline, preserving the canonical final-study notebook. The third acquires/resumes the fixed real dataset and executes its preparation notebook; at the documented free-tier rate the complete download can take several hours. Pass `--data-dir /path/to/export` to select another directory. A study run requires a prepared dataset card; a preparation run can create a new directory. The fixture input bundle is retained under the demo output folder for reproducibility.
+
+The real experiment uses at most 4,096 shared fitting observations and 2,048 validation observations, all test events, three seeds, and 50 real-data GRU epochs. Source training retains the final synthetic profile. The complete [real protocol](../paper/real_data_protocol.md) and [pre-evaluation code/protocol hashes](../paper/real_data_preregistration.json) document the fixed sampling, exclusions, comparisons and claim limits.
+
+Final outputs include flow/path/adaptation tables, paired comparisons, separate source-variation summaries, training diagnostics, path ensemble and calibration figures, and a protocol/manifest with code and configuration hashes. Tail diagnostics use a common validation-derived threshold and include a Brier score and maximum downward coordinate-excursion error.
+
+For the final submission, include the executed notebook, report, selected result tables/figures, data card and source query, and a small dependency/version record. The larger package remains a development archive.
+
+**Delivery:** [compact two-notebook submission](../submission/capstone_submission.zip) (about 10 MB), [optional raw-source archive](../submission/raw_sources.tar.gz) (about 32 MB), and [standalone reproduction audit](../submission/reproduction_report.json). The standalone bundle reproduced all 15 evidence CSV tables and the frozen protocol byte for byte in 49.5 seconds in a fresh local kernel. No credentials or project package are required for that study run.

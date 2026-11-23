@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "environment": "fresh local Jupyter kernel; bundle working directory; no project package or credentials in bundle",
+  "elapsed_seconds": 49.5,
+  "byte_identical_csv_tables": 15,
+  "tables": [
+    "adaptation.csv",
+    "flow.csv",
+    "flow_paired.csv",
+    "flow_summary.csv",
+    "paired.csv",
+    "path_paired.csv",
+    "paths.csv",
+    "real_market/adaptation.csv",
+    "real_market/daily_flow.csv",
+    "real_market/flow.csv",
+    "real_market/flow_summary.csv",
+    "real_market/paired.csv",
+    "real_market/paths.csv",
+    "real_market/training_diagnostics.csv",
+    "training_diagnostics.csv"
+  ],
+  "protocol_byte_identical": true,
+  "executed_code_sha256": "01a5be886eddd6c1068aaf208e30f3656f6c7fb5750501d79268838c9f8d8edd",
+  "actual_google_colab_execution": false
+}

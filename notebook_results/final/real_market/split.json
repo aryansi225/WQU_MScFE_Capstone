@@ -1,0 +1,19 @@
+{
+  "train_end_block": 19151269,
+  "test_start_block": 19238021,
+  "n_train_available": 75092,
+  "n_validation_available": 25389,
+  "fitting_indices_sha256": "9d286b59a62bce7b79d2adede30a7d9754f0d98775a809fd7cc66d93d3817290",
+  "validation_indices_sha256": "75a1659d2e3ba164c02002fb124e51596039288adfeb62d2d4572afa5d8e3a64",
+  "fitting_first_utc": "2024-01-01T00:00:23+00:00",
+  "fitting_last_utc": "2024-02-04T00:00:23+00:00",
+  "validation_first_utc": "2024-02-04T00:02:47+00:00",
+  "test_first_utc": "2024-02-16T04:14:47+00:00",
+  "test_last_utc": "2024-02-25T23:59:59+00:00",
+  "real_gru_epochs": 50,
+  "n_train": 4096,
+  "n_validation": 2048,
+  "n_test": 26453,
+  "data_kind": "real_market",
+  "above_declared_flow_limit": 0
+}

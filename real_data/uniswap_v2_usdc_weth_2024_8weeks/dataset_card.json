@@ -1,0 +1,37 @@
+{
+  "data_kind": "real_market",
+  "pool_address": "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc",
+  "chain_id": 1,
+  "start_block": 18908895,
+  "end_block": 19308029,
+  "start_utc": "2024-01-01T00:00:00+00:00",
+  "end_utc_exclusive": "2024-02-26T00:00:00+00:00",
+  "base_token_index": 1,
+  "quote_symbol": "USDC",
+  "reference_symbol": "ETHUSDC",
+  "reference_delay_seconds": 1.0,
+  "fee": 0.003,
+  "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "token0_decimals": 6,
+  "token1_decimals": 18,
+  "topics": {
+    "Sync": "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1",
+    "Swap": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+  },
+  "source_host": "eth-mainnet.g.alchemy.com",
+  "query": {
+    "method": "eth_getLogs",
+    "address": "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc",
+    "from_block": 18908895,
+    "to_block": 19308029,
+    "chunk": 10
+  },
+  "created_utc": "2026-11-21T22:20:49.457156+00:00",
+  "reference_sources": [
+    "https://data.binance.vision/data/spot/monthly/klines/ETHUSDC/1m/ETHUSDC-1m-2023-12.zip",
+    "https://data.binance.vision/data/spot/monthly/klines/ETHUSDC/1m/ETHUSDC-1m-2024-01.zip",
+    "https://data.binance.vision/data/spot/monthly/klines/ETHUSDC/1m/ETHUSDC-1m-2024-02.zip"
+  ],
+  "reference_quote_symbol": "USDC"
+}
